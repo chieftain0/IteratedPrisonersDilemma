@@ -73,7 +73,7 @@ private:
     int score;
     char *moves;
     int numMoves;
-    Strategy strategy; // make pointer to strategy
+    Strategy strategy;
 
 public:
     // Constructors and Destructors
