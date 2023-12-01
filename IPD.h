@@ -73,7 +73,7 @@ private:
     int score;
     char *moves;
     int numMoves;
-    Strategy strategy;
+    Strategy strategy; // make pointer to strategy
 
 public:
     // Constructors and Destructors
@@ -96,7 +96,6 @@ public:
     ~Player()
     {
         delete[] moves;
-        delete &strategy;
     }
 
     // Methods
@@ -190,8 +189,8 @@ public:
     }
     ~Game()
     {
-        delete players[0];
-        delete players[1];
+        players[0] = nullptr;
+        players[1] = nullptr;
     }
     // Methods
     int addPlayer(Player *newPlayer)
@@ -205,6 +204,23 @@ public:
         {
             players[1] = newPlayer;
             return 1;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+    int removePlayer(int ID)
+    {
+        if (players[0] != nullptr && players[0]->getPlayerID() == ID)
+        {
+            players[0] = nullptr;
+            return 0;
+        }
+        else if (players[1] != nullptr && players[1]->getPlayerID() == ID)
+        {
+            players[1] = nullptr;
+            return 0;
         }
         else
         {
@@ -267,6 +283,7 @@ public:
                 players[1]->updateScore(1);
             }
         }
+        return 0;
     }
 
     void reportResults()
