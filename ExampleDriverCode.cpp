@@ -83,6 +83,7 @@ int main()
                 cout << "Moves: " << endl;
                 p1.printMoves();
                 p2.printMoves();
+                cout << endl;
             }
             else if (choice == 'n')
             {
@@ -101,6 +102,7 @@ int main()
         cout << "Moves: " << endl;
         p1.printMoves();
         p2.printMoves();
+        cout << endl;
     }
 
     g.removePlayer(p1.getPlayerID());
