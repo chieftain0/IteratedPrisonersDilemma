@@ -49,7 +49,7 @@ int main()
     g.removePlayer(p2.getPlayerID());
 
     // Nasty bit of code
-    system("pause");
+    //system("pause");
 
     return 0;
 }
