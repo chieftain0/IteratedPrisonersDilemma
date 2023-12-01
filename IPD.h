@@ -1,5 +1,8 @@
 #include <iostream>
 using namespace std;
+
+//All classes and functions are written to be idiot-proof
+//and return the check values to the caller
 class Strategy
 {
 private:
@@ -167,9 +170,10 @@ public:
         return moves;
     }
 
-    void updateScore(int points)
+    int updateScore(int points)
     {
         score += points;
+        return score;
     }
 };
 
