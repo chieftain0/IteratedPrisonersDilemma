@@ -44,12 +44,11 @@ int main()
     }
     cout << endl;
 
+    cout << "Detective, how many iterations would you like to run the game? " << endl;
     while (N < 1)
     {
-        cout << "Detective, how many iterations would you like to run the game? ";
         cout << "N = ";
         cin >> N;
-        cout << endl;
         if (N < 1)
         {
             cout << "Invalid input" << endl;
