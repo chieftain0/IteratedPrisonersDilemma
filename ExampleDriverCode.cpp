@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 #include "IPD.h"
 using namespace std;
 
@@ -24,6 +25,8 @@ int main()
         if (strategy1 < 1 || strategy1 > 4)
         {
             cout << "Invalid input" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
     }
     cout << endl;
@@ -35,6 +38,8 @@ int main()
         if (strategy2 < 1 || strategy2 > 4)
         {
             cout << "Invalid input" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
     }
     cout << endl;
@@ -48,6 +53,8 @@ int main()
         if (N < 1)
         {
             cout << "Invalid input" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
     }
     cout << endl;
