@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+    int N = 0;
     Player p1, p2;
     int strategy1 = 0, strategy2 = 0;
     cout << "Hello Offenders" << endl;
@@ -38,9 +39,13 @@ int main()
     }
     cout << endl;
 
+    cout << "Detective, how many iterations would you like to run? ";
+    cin >> N;
+    cout << endl;
+
     p1.updateStrategy(strategy1);
     p2.updateStrategy(strategy2);
-    Game g(10);
+    Game g(N);
     g.addPlayer(&p1);
     g.addPlayer(&p2);
     g.play();
@@ -49,7 +54,7 @@ int main()
     g.removePlayer(p2.getPlayerID());
 
     // Nasty bit of code
-    //system("pause");
+    // system("pause");
 
     return 0;
 }
