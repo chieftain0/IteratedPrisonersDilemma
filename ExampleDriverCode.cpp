@@ -26,6 +26,7 @@ int main()
         }
     }
     cout << endl;
+
     while (strategy2 < 1 || strategy2 > 4)
     {
         cout << "Player " << p2.getPlayerID() << " choose your strategy: ";
@@ -44,6 +45,8 @@ int main()
     g.addPlayer(&p2);
     g.play();
     g.reportResults();
+    g.removePlayer(p1.getPlayerID());
+    g.removePlayer(p2.getPlayerID());
 
     // Nasty bit of code
     system("pause");
