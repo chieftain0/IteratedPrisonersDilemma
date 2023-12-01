@@ -70,10 +70,8 @@ int main()
     g.reportScores();
 
     cout << endl;
-    cout << "Moves: " << endl;
     if (p1.getNumMoves() > 10 || p2.getNumMoves() > 10)
     {
-        cout << endl;
         cout << "The number of moves is large" << endl;
         cout << "Would you like to see the moves? (y/n)" << endl;
         while (choice != 'y' && choice != 'n')
@@ -82,6 +80,7 @@ int main()
             cin >> choice;
             if (choice == 'y')
             {
+                cout << "Moves: " << endl;
                 p1.printMoves();
                 p2.printMoves();
             }
@@ -99,9 +98,11 @@ int main()
     }
     else
     {
+        cout << "Moves: " << endl;
         p1.printMoves();
         p2.printMoves();
     }
+    cout << endl;
 
     g.removePlayer(p1.getPlayerID());
     g.removePlayer(p2.getPlayerID());
