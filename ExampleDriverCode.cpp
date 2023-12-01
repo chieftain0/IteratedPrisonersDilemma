@@ -39,8 +39,17 @@ int main()
     }
     cout << endl;
 
-    cout << "Detective, how many iterations would you like to run? ";
-    cin >> N;
+    while (N < 1)
+    {
+        cout << "Detective, how many iterations would you like to run the game? ";
+        cout << "N = ";
+        cin >> N;
+        cout << endl;
+        if (N < 1)
+        {
+            cout << "Invalid input" << endl;
+        }
+    }
     cout << endl;
 
     p1.updateStrategy(strategy1);
@@ -54,7 +63,7 @@ int main()
     g.removePlayer(p2.getPlayerID());
 
     // Nasty bit of code
-    // system("pause");
+    system("pause");
 
     return 0;
 }
