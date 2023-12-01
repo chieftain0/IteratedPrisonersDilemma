@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-//All classes and functions are written to be idiot-proof
-//and return the check values to the caller
+// All classes and functions are written to be idiot-proof
+// and return the check values to the caller
 class Strategy
 {
 private:
@@ -290,13 +290,12 @@ public:
         return 0;
     }
 
-    void reportResults()
+    void reportScores()
     {
-        cout << "Game Results:" << endl;
+        cout << "Scores:" << endl;
         for (int i = 0; i < 2; ++i)
         {
             cout << "Player " << players[i]->getPlayerID() << " - Score: " << players[i]->getScore() << endl;
-            players[i]->printMoves();
         }
     }
 };
