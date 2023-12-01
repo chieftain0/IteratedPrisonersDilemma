@@ -3,6 +3,8 @@
 #include "IPD.h"
 using namespace std;
 
+//Despite of all of the functions being idiot-proof, 
+//main() still makes preliminary input checks
 int main()
 {
     int N = 0;
