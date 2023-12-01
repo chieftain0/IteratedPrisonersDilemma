@@ -102,7 +102,6 @@ int main()
         p1.printMoves();
         p2.printMoves();
     }
-    cout << endl;
 
     g.removePlayer(p1.getPlayerID());
     g.removePlayer(p2.getPlayerID());
