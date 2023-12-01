@@ -108,7 +108,8 @@ int main()
 
     cout << "Thank you for playing!" << endl;
 
-    // Nasty bit of code
+    // Nasty bit of code to pause the program
+    //  Comment this line out if you are on anything except Windows
     system("pause");
 
     return 0;
